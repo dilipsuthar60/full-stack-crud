@@ -1,0 +1,50 @@
+<style>
+  body {
+    margin: 0;
+  }
+
+  input::placeholder {
+    font-size: 16px;
+    font-family: sans-serif;
+  }
+</style>
+<form class="contanier" [formGroup]="loginform" (ngSubmit)="onSubmit(loginform.value)">
+  <div class="login-container">
+       <h1 style="color: red; font-size: 1.5rem;" class="error" *ngIf="error==='Invalid'">Invalid Email And Password !</h1>
+    <h1>Login</h1>
+    <div class="sub-heading">
+      <h2>Welcome to Student details!</h2>
+      <p>Please login-in to your account and start the adventure</p>
+    </div>
+    <div class="section">
+      <div class="login">
+        <input
+          placeholder="Email"
+          type="email"
+          id="email"
+          name="email"
+          formControlName="email"
+        />
+      </div>
+    </div>
+    <div class="section">
+      <div class="login">
+        <input
+          placeholder="Password"
+          type="password"
+          id="password"
+          name="password"
+          formControlName="password"
+        />
+      </div>
+      <div class="forget">
+        <!-- <span><a>Forgot Password?</a></span> -->
+      </div>
+    </div>
+    <button class="login-btn" type="login" name="login">LOGIN</button>
+    <div class="create-heading">
+      New on our platform?
+      <span><a routerLink="/registration">Create an account</a></span>
+    </div>
+  </div>
+</form>

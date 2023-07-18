@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+}
+.btn{
+    text-align: center;
+
+}
+.btn button{
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}

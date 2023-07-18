@@ -1,0 +1,59 @@
+<div class="add-user-form">
+  <form class="form" (ngSubmit)="onSubmit()">
+    <h1 class="heading">Student From</h1>
+    <div>
+      <label for="name">Name :</label>
+      <input
+        placeholder="enter a name"
+        type="text"
+        id="name"
+        name="name"
+        [(ngModel)]="studentdetail.name"
+      />
+    </div>
+    <div>
+      <label for="email">Email :</label>
+      <input
+        placeholder="enter a email"
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="studentdetail.email"
+      />
+    </div>
+    <div>
+      <label for="subject">Subject :</label>
+      <select id="subject" name="subject" [(ngModel)]="studentdetail.subject">
+        <option value="math">math</option>
+        <option value="science">science</option>
+        <option value="hindi">hindi</option>
+        <option value="algorithm">algorithm</option>
+      </select>
+    </div>
+    <div>
+      <div class="form-gender">
+        <label for="gender">Gender : </label>
+        <input
+          type="radio"
+          name="gender"
+          value="Male"
+          [(ngModel)]="studentdetail.gender"
+        />
+        <label for="gender">Male</label>
+
+        <input
+          type="radio"
+          name="gender"
+          value="Female"
+          [(ngModel)]="studentdetail.gender"
+        />
+        <label for="gender">Female</label>
+      </div>
+    </div>
+    <div>
+      <label for="message">Massage :</label>
+      <input name="message" type="text" [(ngModel)]="studentdetail.message" />
+    </div>
+    <button type="submit" name="submit" class="btn">Submit</button>
+  </form>
+</div>

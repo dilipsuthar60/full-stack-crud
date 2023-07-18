@@ -1,0 +1,77 @@
+<div class="head-btn">
+  <a routerLink="/adduser"> Add Student</a>
+  <!-- <form>
+    <input
+      class="search-input"
+      value=""
+      placeholder="enter a name"
+      type="text"
+      id="search"
+      name="search"
+    />
+    <button type="search" class="btn btn-search">Search</button>
+  </form> -->
+  <a routerLink="/logout">Logout</a>
+</div>
+<div class="table-container">
+  <table class="styled-table">
+    <tr>
+      <th>
+        <a>Srno</a>
+      </th>
+      <th>
+        <a>Name</a>
+      </th>
+      <th>
+        <a>Email</a>
+      </th>
+      <th>
+        <a>Subject </a>
+      </th>
+      <th>
+        <a>Gender</a>
+      </th>
+      <th>
+        <a>Message </a>
+      </th>
+      <th><a>Action</a></th>
+    </tr>
+    <tr *ngFor="let student of studentlist; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.email }}</td>
+      <td>{{ student.subject }}</td>
+      <td>{{ student.gender }}</td>
+      <td>{{ student.message }}</td>
+      <td>
+        <button
+          (click)="editstudent(student.id)"
+          style="
+            padding: 0.5rem;
+            color: white;
+            background-color: green;
+            border-radius: 5px;
+            border: none;
+            font-weight: 700;
+          "
+        >
+          Edit</button
+        >&nbsp;<button
+          (click)="deletestudent(student.id)"
+          style="
+            padding: 0.5rem;
+            color: white;
+            background-color: rgb(255, 0, 0);
+            border-radius: 5px;
+            border: none;
+            font-weight: 700;
+          "
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="pagination_section"></div>

@@ -1,0 +1,17 @@
+  input::placeholder {
+      font-size: 16px;
+      font-family: sans-serif;
+  }
+
+  .span {
+      border: 1px solid red;
+      margin: 0;
+  }
+
+  .section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+  }

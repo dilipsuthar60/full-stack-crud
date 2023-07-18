@@ -1,0 +1,356 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.heading {
+    text-align: center;
+    color: rgba(58, 53, 65, 0.87);
+}
+
+.welcome-heading {
+    font-weight: 500;
+    color: #20bf6b;
+}
+
+.form {
+    background: #ffffff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+input {
+    outline: none;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid #636e72;
+}
+
+input:focus {
+    border: 2px solid #9155fd;
+}
+
+.message-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.head-btn {
+    margin: 1.5rem 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 600;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.form-gender {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn {
+    height: 2rem;
+    background-color: #9155fd;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    height: 2.2rem;
+    border: 1px solid #4b4b4b;
+}
+
+.search-input:focus {
+    border: 2px solid #9155fd;
+}
+
+.btn-search {
+    margin-left: 1rem;
+    width: 4rem;
+}
+
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    min-width: 65%;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table tr {
+    color: black;
+    text-align: center;
+    border-bottom: 2px solid #4b4b4b;
+    margin-bottom: 10px;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    background-color: #9155fd;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0 0.1rem;
+}
+
+.pagination_section a {
+    text-align: center;
+    margin: 0.2rem;
+    font-weight: 500;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.active {
+    background-color: #6ab04c;
+}
+
+.insert-message {
+    text-align: center;
+    color: #05c46b;
+    font-size: 2rem;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    color: rgb(247, 54, 54);
+    font-size: 12px;
+    text-align: center;
+    display: block;
+}
+
+.searcherror {
+    font-size: 1rem;
+}
+
+.contanier {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    
+    border: 1.5px solid #bdc3c7;
+}
+
+.sub-heading {
+    text-align: left;
+    color: #707070;
+}
+
+.sub-heading p {
+    font-size: 14px;
+    margin-top: 0.7rem;
+    color: #636e72;
+}
+
+.login-container h1 {
+    color: rgba(58, 53, 65, 0.87);
+    width: 100%;
+}
+
+.login-container h1,
+h2 {
+    font-weight: 500;
+    line-height: 90%;
+}
+
+.login-p {
+    color: #95a5a6;
+}
+
+.login {
+    width: 100%;
+    border: 1px solid #b3b6b6;
+    border-radius: 0.3rem;
+}
+
+.password-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login :focus {
+    border: 2px solid #9155fd;
+    border-radius: 0.3rem;
+}
+
+.login-forget {
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+}
+
+.login-forget span {
+    color: #9155fd;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+
+    height: 2.8rem;
+    background-color: #9155fd;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.create-heading {
+    font-size: 1rem;
+    color: #636e72;
+}
+
+.create-heading span {
+    color: #9155fd;
+    text-decoration: underline;
+}
+
+.create-heading span a {
+    list-style: none;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #9155fd;
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+}
+
+.forget {
+
+    margin: 0;
+    width: 100%;
+    color: #9155fd;
+    text-decoration: underline;
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.forget span a {
+    list-style: none;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #9155fd;
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.section input {
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+@media (max-width: 420px) {
+    .sub-heading h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .sub-heading p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .create-heading {
+        font-size: 1rem;
+    }
+
+    .forget {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1120px) {
+    a {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0.6rem;
+    }
+
+    a span {
+        display: none;
+    }
+}
+
+@media (max-width: 740px) {
+    .head-btn {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

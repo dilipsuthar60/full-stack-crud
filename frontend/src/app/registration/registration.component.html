@@ -1,0 +1,88 @@
+<form class="contanier" [formGroup]="registrationform" (ngSubmit)="onSubmit(registrationform.value)">
+  <div class="login-container">
+    <h1 style="color: red;" *ngIf="error==='User Already Existed !'">User Already Exist !</h1>
+    <h1>Sign-up</h1>
+    <div class="sub-heading">
+      <h2>Welcome to Student daitails!</h2>
+      <p>Please sign-in to your account and start the adventure</p>
+    </div>
+    <div class="section">
+      <div class="login">
+        <input
+          placeholder="Name"
+          type="text"
+          id="name"
+          name="name"
+          formControlName="name"
+        />
+      </div>
+      <div
+        class="error"
+        style="display: block"
+        *ngIf="
+          registrationform.controls['name'].dirty&&
+          registrationform.hasError('required', 'name') ||(registrationform.controls['name'].touched&&registrationform.controls['name'].errors)
+            "
+      >
+        *Name is Required
+      </div>
+    </div>
+    <div class="section">
+      <div class="login">
+        <input
+          placeholder="Email"
+          type="email"
+          id="email"
+          name="email"
+          formControlName="email"
+        />
+      </div>
+      <div
+        class="error"
+        style="display: block"
+        *ngIf="
+          registrationform.controls['email'].dirty &&
+          registrationform.hasError('required', 'email')
+        "
+      >
+        *Email is Required
+      </div>
+    </div>
+    <div class="section">
+      <div class="login">
+        <input
+          placeholder="Password"
+          type="password"
+          id="password"
+          name="password"
+          formControlName="password"
+        />
+      </div>
+      <div
+        class="error"
+        style="display: block"
+        *ngIf="
+          registrationform.controls['password'].dirty &&
+          registrationform.hasError('required', 'password')
+        "
+      >
+        *Password is Required
+      </div>
+    </div>
+    <button
+      class="login-btn"
+      type="submit"
+      name="submit"
+    >
+      SIGN UP
+    </button>
+    <div class="create-heading">
+      If you have a Account?
+      <span
+        ><a routerLink="/login" style="text-decoration: none; color: #9155fd"
+          >Login an account</a
+        ></span
+      >
+    </div>
+  </div>
+</form>

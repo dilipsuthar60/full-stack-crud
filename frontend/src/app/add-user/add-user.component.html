@@ -1,0 +1,104 @@
+<style>
+  .add-user-form {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+<div class="add-user-form">
+  <form
+    class="form"
+    [formGroup]="adduserform"
+    (ngSubmit)="onsubmit(adduserform.value)"
+  >
+    <h1 class="heading">Student From</h1>
+    <div>
+      <label for="name">Name :</label>
+      <input
+        placeholder="enter a name"
+        type="text"
+        id="name"
+        name="name"
+        formControlName="name"
+      />
+      <span
+        class="error"
+        style="display: block"
+        *ngIf="name && name.invalid && name.touched"
+        >*Name is Required</span
+      >
+    </div>
+    <div>
+      <label for="email">Email :</label>
+      <input
+        placeholder="enter a email"
+        type="email"
+        id="email"
+        name="email"
+        formControlName="email"
+      />
+      <span class="error" *ngIf="email && email.invalid && email.touched"
+        >*Email is Required
+      </span>
+    </div>
+    <div>
+      <label for="password">Password :</label>
+      <input
+        placeholder="enter a password"
+        type="password"
+        id="password"
+        name="password"
+        formControlName="password"
+      />
+      <span
+        class="error"
+        *ngIf="password && password.invalid && password.touched"
+        >*Password is Required</span
+      >
+    </div>
+    <div>
+      <label for="subject">Subject :</label>
+      <select id="subject" name="subject" formControlName="subject">
+        <option value="math">math</option>
+        <option value="science">science</option>
+        <option value="hindi">hindi</option>
+        <option value="algorithm">algorithm</option>
+      </select>
+      <span class="error"> </span>
+    </div>
+    <div>
+      <div class="form-gender">
+        <label for="gender">Gender : </label>
+        <input
+          type="radio"
+          id="gender1"
+          name="gender"
+          value="Male"
+          formControlName="gender"
+        />
+        <label for="gender">Male</label>
+
+        <input
+          type="radio"
+          id="gender2"
+          name="gender"
+          value="Female"
+          formControlName="gender"
+        />
+        <label for="gender">Female</label>
+      </div>
+      <div class="error" *ngIf="gender && gender.invalid && gender.touched">
+        *Gender is Required
+      </div>
+    </div>
+    <div>
+      <label for="message">Massage :</label>
+      <input name="message" type="text" formControlName="message" />
+      <span class="error" *ngIf="message && message.invalid && message.touched"
+        >*Message is Required</span
+      >
+    </div>
+    <button type="submit" name="submit" class="btn" *ngIf="adduserform.valid">Submit</button>
+  </form>
+</div>
